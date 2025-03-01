@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>AccountTriggerLogic</members>
+        <members>TriggerStructure</members>
+        <members>I_dmlOperations</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>AccountTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>TriggerSwitch__c</members>
+        <name>CustomObject</name>
+    </types>
+    <version>63.0</version>
+</Package>
+
+<!--
+Purpose of this development;
+- Trigger status could be managed with one checkbox.
+- The structure is forces to developer for write more clean code.
+- Common trigger requirements could do in one class. (Trigger switches, bug tracing etc.)
+-->
