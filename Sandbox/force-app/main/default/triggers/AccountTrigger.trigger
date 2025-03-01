@@ -1,4 +1,4 @@
-trigger AccountTrigger on Account (before insert) {
-    AccountTriggerController triggerClass = new AccountTriggerController();
+trigger AccountTrigger on Account (before update, after update) {
+    AccountTriggerLogic triggerClass = new AccountTriggerLogic();
     triggerClass.runAll();  
 }

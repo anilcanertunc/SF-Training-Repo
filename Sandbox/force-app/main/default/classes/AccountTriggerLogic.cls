@@ -1,4 +1,4 @@
-public with sharing class AccountTriggerController extends TriggerStructure{
+public with sharing class AccountTriggerLogic extends TriggerStructure{
 
     //DML Operation Methods
     public void beforeInsert() {
@@ -8,10 +8,10 @@ public with sharing class AccountTriggerController extends TriggerStructure{
         //Not Implemented
     }
     public void beforeUpdate() {
-        //Not Implemented
+        debuggerMethod('beforeUpdate'); 
     } 
     public void afterUpdate() {
-        //Not Implemented
+        debuggerMethod('afterUpdate'); 
     }
     
     public void beforeDelete() {
@@ -21,4 +21,8 @@ public with sharing class AccountTriggerController extends TriggerStructure{
     public void afterDelete() {
         //Not Implemented
     } 
+    
+    private void debuggerMethod(String value1) {
+        System.debug(value1 + ' method in logic class'); 
+    }
 }
